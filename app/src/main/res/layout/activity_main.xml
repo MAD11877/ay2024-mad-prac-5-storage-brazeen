@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAD Practical"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/holopurple"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/TextView"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:layout_marginTop="35dp"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ImageView"
+            app:layout_constraintStart_toStartOf="@id/ImageView"
+            app:layout_constraintEnd_toEndOf="@id/ImageView"/>
+
+        <TextView
+            android:id="@+id/TextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="10dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna enim. Nullam sollicitudin non nunc a convallis."
+            android:textSize="14dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/TextView2"
+            app:layout_constraintStart_toStartOf="@id/TextView2"
+            app:layout_constraintEnd_toEndOf="@id/TextView2"/>
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="20mm"
+            android:layout_height="8mm"
+            android:layout_marginTop="30dp"
+            android:textSize="16dp"
+            android:text=""
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/TextView3"
+            app:layout_constraintEnd_toStartOf="@id/Button2"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="20mm"
+            android:layout_height="8mm"
+            android:layout_marginTop="30dp"
+            android:textSize="16dp"
+            android:text="MESSAGE"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/TextView3"
+            app:layout_constraintStart_toEndOf="@id/Button1"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
