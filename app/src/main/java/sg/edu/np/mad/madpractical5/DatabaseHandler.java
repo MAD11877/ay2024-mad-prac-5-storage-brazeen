@@ -13,7 +13,7 @@ import java.util.Random;
 import android.database.sqlite.SQLiteException;
 import android.util.Log;
 
-public class dbHandler extends SQLiteOpenHelper {
+public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "myusers.db";
     private static final String USERS = "users";
@@ -22,7 +22,7 @@ public class dbHandler extends SQLiteOpenHelper {
     private static final String COLUMN_DESCRIPTION = "description";
     private static final String COLUMN_FOLLOWED = "followed";
 
-    public dbHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
+    public DatabaseHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 

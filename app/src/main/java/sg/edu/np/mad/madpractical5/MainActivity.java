@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        dbHandler dbHandler = new dbHandler(this, null, null, 1);
+        DatabaseHandler DatabaseHandler = new DatabaseHandler(this, null, null, 1);
         TextView nameview = findViewById(R.id.TextView2);
         TextView descview = findViewById(R.id.TextView3);
         Button followbtn = findViewById(R.id.Button1);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         descview.setText(userdescription);
 
 
-        user = dbHandler.getUser(username);
+        user = DatabaseHandler.getUser(username);
         Log.i("pe", user.name);
 
         if (user.getFollowed()){
@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 if (user.getFollowed()){
                     followbtn.setText("FOLLOW");
                     user.setFollowed(false);
-                    dbHandler.updateUser(user);
+                    DatabaseHandler.updateUser(user);
                     Toast.makeText(MainActivity.this,"Unfollowed", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     followbtn.setText("UNFOLLOW");
                     user.setFollowed(true);
-                    dbHandler.updateUser(user);
+                    DatabaseHandler.updateUser(user);
                     Toast.makeText(MainActivity.this, "Followed", Toast.LENGTH_SHORT).show();
                 }
 
