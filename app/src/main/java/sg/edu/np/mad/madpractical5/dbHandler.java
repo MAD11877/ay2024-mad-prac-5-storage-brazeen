@@ -141,6 +141,6 @@ public class dbHandler extends SQLiteOpenHelper {
     @Override
     public void close() {
         Log.i("Database Operations", "Database is closed.");
-       // super.close();
+        super.close();
     }
 }
